@@ -1,0 +1,26 @@
+* {
+    --dark: black;
+    --darker: var(--dark);
+    --white: white;
+    --accent: #00FF00 ;
+
+    
+    --text: var(--white);
+    --bg: var(--dark);
+
+    --dleft-angle: -5deg;
+    --dleft-bg: var(--white);
+    --dleft-fg: var(--dark);
+    --dleft-shadow: none;
+    
+    --dright-angle: 5deg;
+    --dright-bg: var(--white);
+    --dright-fg: var(--dark);
+    --dright-shadow: none;
+
+    --panel-button: rgba(0,0,0,0);
+    --panel-button-hover:var(--accent);
+
+    --button:var(--accent);
+    --button-hover: rgba(100,255,100);
+}

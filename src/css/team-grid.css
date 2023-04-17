@@ -1,0 +1,174 @@
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,200px);
+    grid-template-rows: repeat(auto-fit);
+    grid-gap: 10px;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+.user {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 0px;
+    transform: perspective(400px) rotateX(0deg) translateY(0px);
+    transition: 400ms;
+    position: relative;
+    isolation: isolate;
+}
+
+.user.reverse {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    position: relative;
+    margin-top: 60px;
+    transform: perspective(400px) rotateX(0deg) scale(1.0);
+    transition: 400ms;
+    position: relative;
+    isolation: isolate;
+    
+}
+
+
+.user::after {
+    transition: 200ms;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform:skewY(5deg);
+}
+
+.user:is(:hover, :focus)::after {
+    transform:skewY(5deg) scaleY(1.1);
+    padding-bottom: 10px;
+}
+
+
+.user:is(:hover, :focus) .icon {
+    transform: scale(1.1);
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 5px);
+    z-index: 10;
+}
+
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    text-align: center;
+    word-wrap: break-word;
+
+}
+
+.user .inside {
+    margin-top: 60px;
+}
+.user a {
+    padding: 10px;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: 400ms;
+    color: black;
+    border-radius: 0px;
+    position: relative;
+    isolation: isolate;
+    padding-block: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.user a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--button);
+    filter: brightness(0.8);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform:skewY(5deg);
+    transition: 400ms;
+    
+}
+
+.user a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--button);
+    filter: brightness(0.6);
+    transform: skewY(5deg);
+    z-index: -2;
+    transition: 200ms;
+}
+
+.user a:is(:hover, :focus):after {
+    background: var(--button-hover);
+    transform: skewY(5deg) scaleY(1.1);
+}
+
+
+
+.user a:is(:hover, :focus)::before {
+    background: var(--button-hover);
+    transform: skewY(6deg) scaleY(1.2);
+}
+
+
+.user h3 {
+    text-align: center;
+}
+.user .icon {
+    aspect-ratio: 1;
+    position: absolute;
+    height: 100px;
+    left: 50%;
+    translate:-50% -50%;
+    background-color: white;
+    border-radius: 5000px;
+    overflow: hidden;
+    outline-offset: -1px;
+    transition: 100ms;
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 0 2px);
+}
+.user .icon h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    translate: -50% -50%;
+    font-size: 3rem;
+}
+
+.team-light .user {
+    color: var(--dark);
+}
+
+.team-light .user::after {
+    background-color: var(--white);
+}
+
+.team-light .user .icon,.user:is(:hover, :focus) .icon {
+    outline-color: var(--dark);
+}
+
+.team-light a::after {
+    filter: brightness(0.9);
+}
+
+@media only screen and (max-width: 600px){
+    .team {
+        grid-template-columns: 100%;
+    }
+    
+}

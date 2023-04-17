@@ -1,0 +1,57 @@
+div.wrapper {
+    max-width: 70rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+section {
+    padding-block: 5rem;
+    margin-block: 2rem;
+}
+
+section.start {
+    padding-block: 3rem;
+    margin-block: 0rem;
+}
+
+section h1 {
+    text-align: center;
+}
+
+section.dleft {
+    
+    color: var(--dleft-fg);
+    position: relative;
+    isolation: isolate;
+}
+
+section.dright {
+    
+    color: var(--dright-fg);
+    position: relative;
+    isolation: isolate;
+}
+section.dleft::after {
+    content: "";
+    background: var(--dleft-bg);
+    position: absolute;
+    inset: 0;
+    transform: skewY(var(--dleft-angle));
+    box-shadow: var(--dleft-shadow);
+    z-index: -1;
+}
+section.dright::after {
+    content: "";
+    background: var(--dright-bg);
+    position: absolute;
+    inset: 0;
+    transform: skewY(var(--dright-angle));
+    box-shadow: var(--dright-shadow);
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px){
+    sections {
+        
+    }
+}

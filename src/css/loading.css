@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+.loading {
+    width: 100px;
+    aspect-ratio: 1;
+    position: absolute;
+    inset: 50% 50%;
+    transform: translate(-50%,-50%);
+}
+.loading::before {
+    background: radial-gradient();
+}
