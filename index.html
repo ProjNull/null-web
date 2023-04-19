@@ -9,7 +9,7 @@
   <body>
     <div id="app">
       <div class="nojsvue">
-        <b style="animation: show 0.5s 1s forwards; opacity: 0; color: white;">Please enable JavaScript</b>
+        <b style="animation: show 0.5s 2s forwards; opacity: 0; color: white;">Please enable JavaScript</b>
       </div>
       
       <style>
@@ -35,7 +35,7 @@
           transform: skewX(-45deg) scale(1);
           opacity: 0;
           background-color: rgb(255, 0, 0);
-          animation: show 400ms 200ms forwards cubic-bezier(.21,1.72,.61,.89);
+          animation: show 400ms 1200ms forwards cubic-bezier(.21,1.72,.61,.89);
         }
 
         .nojsvue::after {
@@ -48,7 +48,7 @@
           opacity: 0;
           transform: skewX(-50deg) scale(1) scaleX(1.1);
           background-color: rgb(146, 0, 0);
-          animation: show 400ms 100ms forwards cubic-bezier(.21,1.72,.61,.89);
+          animation: show 400ms 1100ms forwards cubic-bezier(.21,1.72,.61,.89);
         }
 
         @keyframes show {
