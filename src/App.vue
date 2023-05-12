@@ -13,7 +13,6 @@ import HelloWorld from './components/HelloWorld.vue'
       <router-link to="/about">About</router-link>
       <router-link to="/projects">Projects</router-link>
   </div>
-  <div style="height: 2.5rem;"></div>
   <router-view v-slot="{ Component }">
     <transition name="slide" mode="out-in">
             <component :is="Component" />
